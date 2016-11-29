@@ -1,8 +1,9 @@
 ---
+title: Checking out Jekyll!
+date: '2016-05-23 15:27:06'
 layout: post
-title:  "Checking out Jekyll!"
-date:   2016-05-23 11:27:06 -0400
-categories: jekyll update
+categories:
+- jekyll update
 ---
 
 # A New File!

@@ -1,8 +1,9 @@
 ---
+title: Checking out Kubernetes
+date: '2016-06-05 09:52:06'
 layout: post
-title:  "Checking out Kubernetes"
-date:   2016-06-05 05:52:06 -0400
-categories: jekyll update
+categories:
+- jekyll update
 ---
 
 # New Kubernetes blog post!
