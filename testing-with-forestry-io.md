@@ -1,6 +1,6 @@
 ---
 title: Testing with Forestry.io
-date: '2016-11-29 01:09:03'
+date: '2016-11-29 00:00:00'
 layout: post
 ---
 This is my initial page test with Forestry.io. 
