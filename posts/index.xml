@@ -192,7 +192,9 @@ Association football, more commonly known as football or soccer,[2] is a sport p
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       <author>pdavis@pebcac.org (Preston Davis)</author>
       <guid>https://pebcac.github.io/posts/ubuntu-guest-agent/</guid>
-      <description>Table of Contents Introduction Methods for Installation Using apt-get via terminal to install the oVirt Guest Tools Source list filler   Reference material for adoc files   Introduction Installing the Guest Agent in ubuntu virtual machine is fairly simple and will provide the oVirt-engine with additional information about the VM. The process has two main steps which is adding an install source and installing the ovirt-guest-agent package. Presently the ovirt-guest-agent package for Ubuntu is not in the official repos, but is available through evilissimo who currently maintains the package.</description>
+      <description>draft: true :toc:
+   Introduction Installing the Guest Agent in ubuntu virtual machine is fairly simple and will provide the oVirt-engine with additional information about the VM. The process has two main steps which is adding an install source and installing the ovirt-guest-agent package. Presently the ovirt-guest-agent package for Ubuntu is not in the official repos, but is available through evilissimo who currently maintains the package.
+   Methods for Installation Using apt-get via terminal to install the oVirt Guest Tools From a terminal session, type the following</description>
     </item>
     
   </channel>
