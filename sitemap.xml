@@ -86,12 +86,6 @@
   </url>
   
   <url>
-    <loc>https://pebcac.github.io/</loc>
-    <lastmod>2018-10-27T03:20:30-04:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
     <loc>https://pebcac.github.io/tags/bigimg/</loc>
     <lastmod>2017-03-07T00:00:00+00:00</lastmod>
     <priority>0</priority>
@@ -129,6 +123,12 @@
   <url>
     <loc>https://pebcac.github.io/tags/math/</loc>
     <lastmod>2017-03-05T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://pebcac.github.io/</loc>
+    <lastmod>2018-10-27T03:20:30-04:00</lastmod>
     <priority>0</priority>
   </url>
   
