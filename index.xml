@@ -207,16 +207,6 @@ It makes use of a variety of open source projects including:
     </item>
     
     <item>
-      <title></title>
-      <link>https://pebcac.github.io/posts/newpost/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <author>pdavis@pebcac.org (Preston Davis)</author>
-      <guid>https://pebcac.github.io/posts/newpost/</guid>
-      <description>Table of Contents Preface Confidentiality, Copyright, and Disclaimer     Preface Confidentiality, Copyright, and Disclaimer This is a Customer-facing document between Red Hat, Inc. and {customer} (“Client”).
- Copyright © {year} Red Hat, Inc. All Rights Reserved. No part of the work covered by the copyright herein may be reproduced or used in any form or by any means – graphic, electronic, or mechanical, including photocopying, recording, taping, or information storage and retrieval systems – without permission in writing from Red Hat except as is required to share this information as provided with the aforementioned confidential parties.</description>
-    </item>
-    
-    <item>
       <title>About me</title>
       <link>https://pebcac.github.io/page/about/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
