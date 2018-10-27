@@ -21,7 +21,7 @@
       <description>When programming or even running certain applications, have you ever received these or similar error messages?
  locale: Cannot set LC_CTYPE to default locale: No such file or directory locale: Cannot set LC_MESSAGES to default locale: No such file or directory   Yea, I love the error too. 😏
 Luckily, there&amp;#8217;s a simple fix:
- See whih locale&amp;#8217;s you have $ locale LANG=en_US.UTF-8 LC_CTYPE=en_US.UTF-8 LC_NUMERIC=&#34;en_US.UTF-8&#34; LC_TIME=&#34;en_US.UTF-8&#34; LC_COLLATE=&#34;en_US.UTF-8&#34; LC_MONETARY=&#34;en_US.UTF-8&#34; LC_MESSAGES=&#34;en_US.UTF-8&#34; LC_PAPER=&#34;</description>
+ See which locale&amp;#8217;s you have $ locale LANG=en_US.UTF-8 LC_CTYPE=en_US.UTF-8 LC_NUMERIC=&#34;en_US.UTF-8&#34; LC_TIME=&#34;en_US.UTF-8&#34; LC_COLLATE=&#34;en_US.UTF-8&#34; LC_MONETARY=&#34;en_US.UTF-8&#34; LC_MESSAGES=&#34;en_US.UTF-8&#34; LC_PAPER=&#34;</description>
     </item>
     
     <item>
