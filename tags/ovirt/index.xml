@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Ovirt on Beautiful Hugo</title>
+    <link>https://pebcac.github.io/tags/ovirt/</link>
+    <description>Recent content in Ovirt on Beautiful Hugo</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <managingEditor>pdavis@pebcac.org (Preston Davis)</managingEditor>
+    <webMaster>pdavis@pebcac.org (Preston Davis)</webMaster>
+    <lastBuildDate>Sat, 27 Oct 2018 03:20:30 -0400</lastBuildDate>
+    
+	<atom:link href="https://pebcac.github.io/tags/ovirt/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Centos OVirt Guest Agent</title>
+      <link>https://pebcac.github.io/posts/centos-ovirt-guest-agent/</link>
+      <pubDate>Sat, 27 Oct 2018 03:20:30 -0400</pubDate>
+      <author>pdavis@pebcac.org (Preston Davis)</author>
+      <guid>https://pebcac.github.io/posts/centos-ovirt-guest-agent/</guid>
+      <description>Table of Contents Methods for Installation Using YUM via terminal to install the oVirt Guest Tools Starting the service   Troubleshooting Reference material for adoc files   Methods for Installation Using YUM via terminal to install the oVirt Guest Tools From a terminal session, type the following (for oVirt 4.2)
+ YUM install sudo yum install centos-release-ovirt42 sudo yum install ovirt-guest-agent-common    Starting the service From a terminal, enter the following commands to start the oVirt Guest Agent service</description>
+    </item>
+    
+  </channel>
+</rss>
