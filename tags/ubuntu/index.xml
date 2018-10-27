@@ -1,15 +1,15 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Linux on Mr Pebcac</title>
-    <link>https://pebcac.github.io/tags/linux/</link>
-    <description>Recent content in Linux on Mr Pebcac</description>
+    <title>Ubuntu on Mr Pebcac</title>
+    <link>https://pebcac.github.io/tags/ubuntu/</link>
+    <description>Recent content in Ubuntu on Mr Pebcac</description>
     <generator>Hugo -- gohugo.io</generator>
     <managingEditor>pdavis@pebcac.org (Preston Davis)</managingEditor>
     <webMaster>pdavis@pebcac.org (Preston Davis)</webMaster>
     <lastBuildDate>Sat, 27 Oct 2018 04:03:55 -0400</lastBuildDate>
     
-	<atom:link href="https://pebcac.github.io/tags/linux/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://pebcac.github.io/tags/ubuntu/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
@@ -19,16 +19,6 @@
       <author>pdavis@pebcac.org (Preston Davis)</author>
       <guid>https://pebcac.github.io/posts/2018-10-27-ubuntu-ovirt-guest-agent/</guid>
       <description>Table of Contents Introduction Methods for Installation Using apt-get via terminal to install the oVirt Guest Tools Source list filler   Reference material for adoc files   Introduction Installing the Guest Agent in ubuntu virtual machine is fairly simple and will provide the oVirt-engine with additional information about the VM. The process has two main steps which is adding an install source and installing the ovirt-guest-agent package. Presently the ovirt-guest-agent package for Ubuntu is not in the official repos, but is available through evilissimo who currently maintains the package.</description>
-    </item>
-    
-    <item>
-      <title>Centos OVirt Guest Agent</title>
-      <link>https://pebcac.github.io/posts/centos-ovirt-guest-agent/</link>
-      <pubDate>Sat, 27 Oct 2018 03:20:30 -0400</pubDate>
-      <author>pdavis@pebcac.org (Preston Davis)</author>
-      <guid>https://pebcac.github.io/posts/centos-ovirt-guest-agent/</guid>
-      <description>Table of Contents Methods for Installation Using YUM via terminal to install the oVirt Guest Tools Starting the service   Troubleshooting Reference material for adoc files   Methods for Installation Using YUM via terminal to install the oVirt Guest Tools From a terminal session, type the following (for oVirt 4.2)
- YUM install sudo yum install centos-release-ovirt42 sudo yum install ovirt-guest-agent-common    Starting the service From a terminal, enter the following commands to start the oVirt Guest Agent service</description>
     </item>
     
   </channel>

@@ -7,7 +7,7 @@
     <generator>Hugo -- gohugo.io</generator>
     <managingEditor>pdavis@pebcac.org (Preston Davis)</managingEditor>
     <webMaster>pdavis@pebcac.org (Preston Davis)</webMaster>
-    <lastBuildDate>Sat, 27 Oct 2018 03:20:30 -0400</lastBuildDate>
+    <lastBuildDate>Sat, 27 Oct 2018 04:03:55 -0400</lastBuildDate>
     
 	<atom:link href="https://pebcac.github.io/tags/index.xml" rel="self" type="application/rss+xml" />
     
@@ -15,7 +15,7 @@
     <item>
       <title>Agent</title>
       <link>https://pebcac.github.io/tags/agent/</link>
-      <pubDate>Sat, 27 Oct 2018 03:20:30 -0400</pubDate>
+      <pubDate>Sat, 27 Oct 2018 04:03:55 -0400</pubDate>
       <author>pdavis@pebcac.org (Preston Davis)</author>
       <guid>https://pebcac.github.io/tags/agent/</guid>
       <description></description>
@@ -27,6 +27,15 @@
       <pubDate>Tue, 07 Mar 2017 00:00:00 +0000</pubDate>
       <author>pdavis@pebcac.org (Preston Davis)</author>
       <guid>https://pebcac.github.io/tags/bigimg/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Centos</title>
+      <link>https://pebcac.github.io/tags/centos/</link>
+      <pubDate>Sat, 27 Oct 2018 03:20:30 -0400</pubDate>
+      <author>pdavis@pebcac.org (Preston Davis)</author>
+      <guid>https://pebcac.github.io/tags/centos/</guid>
       <description></description>
     </item>
     
@@ -51,7 +60,7 @@
     <item>
       <title>Linux</title>
       <link>https://pebcac.github.io/tags/linux/</link>
-      <pubDate>Sat, 27 Oct 2018 03:20:30 -0400</pubDate>
+      <pubDate>Sat, 27 Oct 2018 04:03:55 -0400</pubDate>
       <author>pdavis@pebcac.org (Preston Davis)</author>
       <guid>https://pebcac.github.io/tags/linux/</guid>
       <description></description>
@@ -78,7 +87,7 @@
     <item>
       <title>Ovirt</title>
       <link>https://pebcac.github.io/tags/ovirt/</link>
-      <pubDate>Sat, 27 Oct 2018 03:20:30 -0400</pubDate>
+      <pubDate>Sat, 27 Oct 2018 04:03:55 -0400</pubDate>
       <author>pdavis@pebcac.org (Preston Davis)</author>
       <guid>https://pebcac.github.io/tags/ovirt/</guid>
       <description></description>
@@ -90,6 +99,15 @@
       <pubDate>Mon, 20 Mar 2017 00:00:00 +0000</pubDate>
       <author>pdavis@pebcac.org (Preston Davis)</author>
       <guid>https://pebcac.github.io/tags/photoswipe/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Ubuntu</title>
+      <link>https://pebcac.github.io/tags/ubuntu/</link>
+      <pubDate>Sat, 27 Oct 2018 04:03:55 -0400</pubDate>
+      <author>pdavis@pebcac.org (Preston Davis)</author>
+      <guid>https://pebcac.github.io/tags/ubuntu/</guid>
       <description></description>
     </item>
     
