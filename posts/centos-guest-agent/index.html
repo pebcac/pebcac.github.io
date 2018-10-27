@@ -9,6 +9,11 @@
   <title>Beautiful Hugo - Beautiful Hugo</title>
   <meta property="og:title" content="Beautiful Hugo" />
   <meta name="twitter:title" content="Beautiful Hugo" />
+  <meta name="description" content="Table of Contents Methods for Installation Using YUM via terminal to install the oVirt Guest Tools Starting the service   Troubleshooting Reference material for adoc files   Methods for Installation Using YUM via terminal to install the oVirt Guest Tools From a terminal session, type the following (for oVirt 4.2)
+ YUM install sudo yum install centos-release-ovirt42 sudo yum install ovirt-guest-agent-common    Starting the service From a terminal, enter the following commands to start the oVirt Guest Agent service">
+  <meta property="og:description" content="Table of Contents Methods for Installation Using YUM via terminal to install the oVirt Guest Tools Starting the service   Troubleshooting Reference material for adoc files   Methods for Installation Using YUM via terminal to install the oVirt Guest Tools From a terminal session, type the following (for oVirt 4.2)
+ YUM install sudo yum install centos-release-ovirt42 sudo yum install ovirt-guest-agent-common    Starting the service From a terminal, enter the following commands to start the oVirt Guest Agent service">
+  <meta name="twitter:description" content="Table of Contents Methods for Installation Using YUM via terminal to install the oVirt Guest Tools Starting the service   Troubleshooting Reference material for adoc files   Methods for Installation …">
   <meta name="author" content="Preston Davis"/>
   <link href='https://pebcac.github.io/img/favicon.ico' rel='icon' type='image/x-icon'/>
   <meta property="og:image" content="https://pebcac.github.io/img/avatar-icon.png" />
@@ -16,12 +21,12 @@
   <meta name="twitter:card" content="summary" />
   <meta name="twitter:site" content="@username" />
   <meta name="twitter:creator" content="@username" />
-  <meta property="og:url" content="https://pebcac.github.io/" />
+  <meta property="og:url" content="https://pebcac.github.io/posts/centos-guest-agent/" />
   <meta property="og:type" content="website" />
   <meta property="og:site_name" content="Beautiful Hugo" />
 
   <meta name="generator" content="Hugo 0.37.1" />
-  <link rel="canonical" href="https://pebcac.github.io/" />
+  <link rel="canonical" href="https://pebcac.github.io/posts/centos-guest-agent/" />
   <link rel="alternate" href="https://pebcac.github.io/index.xml" type="application/rss+xml" title="Beautiful Hugo">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.7.1/katex.min.css" integrity="sha384-wITovz90syo1dJWVh32uuETPVEtGigN07tkttEqPv+uR2SE/mbQcG7ATL28aI9H0" crossorigin="anonymous">
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
@@ -148,50 +153,202 @@
 
 
 
-  
-
-  <header class="header-section ">
-    
-    <div class="intro-header no-img">
-      <div class="container">
-        <div class="row">
-          <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
-            <div class="page-heading">
-              
-                <h1>Beautiful Hugo</h1>
-              
-              
-                <hr class="small">
-              
-              
-                
-                  <span class="page-subheading">At tech blog for the rest of us</span>
-                
-              
-              
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </header>
+  <div class="intro-header"></div>
 
 
     
-  <div role="main" class="container">
-    <div class="row">
-      <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+<div class="container" role="main">
+  <div class="row">
+    <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+      <article role="main" class="blog-post">
+        <div id="toc" class="toc">
+<div id="toctitle">Table of Contents</div>
+<ul class="sectlevel1">
+<li><a href="#_methods_for_installation">Methods for Installation</a>
+<ul class="sectlevel2">
+<li><a href="#_using_yum_via_terminal_to_install_the_ovirt_guest_tools">Using YUM via terminal to install the oVirt Guest Tools</a></li>
+<li><a href="#_starting_the_service">Starting the service</a></li>
+</ul>
+</li>
+<li><a href="#_troubleshooting">Troubleshooting</a></li>
+<li><a href="#_reference_material_for_adoc_files">Reference material for adoc files</a></li>
+</ul>
+</div>
+<div class="sect1">
+<h2 id="_methods_for_installation">Methods for Installation</h2>
+<div class="sectionbody">
+<div class="sect2">
+<h3 id="_using_yum_via_terminal_to_install_the_ovirt_guest_tools">Using YUM via terminal to install the oVirt Guest Tools</h3>
+<div class="paragraph">
+<p>From a terminal session, type the following (for oVirt 4.2)</p>
+</div>
+<div class="listingblock">
+<div class="title">YUM install</div>
+<div class="content">
+<pre>sudo yum install centos-release-ovirt42
+sudo yum install ovirt-guest-agent-common</pre>
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_starting_the_service">Starting the service</h3>
+<div class="paragraph">
+<p>From a terminal, enter the following commands to start the oVirt Guest Agent service</p>
+</div>
+<div class="paragraph">
+<div class="title">Start the service</div>
+<p><code>sudo systemctl enable --now ovirt-guest-agent.service</code></p>
+</div>
+<div class="paragraph">
+<p>The above command will enable the service to always start at booto, and start the service now so you do not need to reboot the VM.</p>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_troubleshooting">Troubleshooting</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>The web admin interface may take some time to start displaying the memory usage and other types of information. If you find that after some time this information has not been populated, restart the VM by performing a shut down or power off, power on, and verify that the service is started by running:</p>
+</div>
+<div class="paragraph">
+<div class="title">Service verification</div>
+<p><code>sudo systemctl status ovirt-guest-agent.service</code></p>
+</div>
+<div class="paragraph">
+<p>A reboot of the virtual machine did not seem to resolve the issue.</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_reference_material_for_adoc_files">Reference material for adoc files</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p><a href="https://asciidoctor.org/docs/asciidoc-syntax-quick-reference" class="bare">https://asciidoctor.org/docs/asciidoc-syntax-quick-reference</a></p>
+</div>
+<div class="paragraph">
+<p><a href="https://powerman.name/doc/asciidoc" class="bare">https://powerman.name/doc/asciidoc</a></p>
+</div>
+</div>
+</div>
+
+
         
 
-        <div class="posts-list">
-          
-          
-        </div>
+        
+            <hr/>
+            <section id="social-share">
+              <ul class="list-inline footer-links">
+                
+
+
+<li>
+    <a href="//twitter.com/share?url=https%3a%2f%2fpebcac.github.io%2fposts%2fcentos-guest-agent%2f&amp;text=&amp;via=username"
+       target="_blank" alt="" title="Share on Twitter">
+        <span class="fa-stack fa-lg">
+                <i class="fa fa-circle fa-stack-2x"></i>
+                <i class="fa fa-twitter fa-stack-1x fa-inverse"></i>
+              </span>
+    </a>
+</li>
+
+
+<li>
+    <a href="//plus.google.com/share?url=https%3a%2f%2fpebcac.github.io%2fposts%2fcentos-guest-agent%2f" target="_blank" title="Share on Google Plus">
+         <span class="fa-stack fa-lg">
+                <i class="fa fa-circle fa-stack-2x"></i>
+                <i class="fa fa-google-plus fa-stack-1x fa-inverse"></i>
+              </span>
+    </a>
+</li>
+
+
+<li>
+    <a href="//www.facebook.com/sharer/sharer.php?u=https%3a%2f%2fpebcac.github.io%2fposts%2fcentos-guest-agent%2f" target="_blank" title="Share on Facebook">
+        <span class="fa-stack fa-lg">
+                <i class="fa fa-circle fa-stack-2x"></i>
+                <i class="fa fa-facebook fa-stack-1x fa-inverse"></i>
+              </span>
+    </a>
+</li>
+
+
+<li>
+    <a href="//reddit.com/submit?url=https%3a%2f%2fpebcac.github.io%2fposts%2fcentos-guest-agent%2f&amp;title=" target="_blank" title="Share on Reddit">
+         <span class="fa-stack fa-lg">
+                <i class="fa fa-circle fa-stack-2x"></i>
+                <i class="fa fa-reddit fa-stack-1x fa-inverse"></i>
+              </span>
+    </a>
+</li>
+
+
+<li>
+    <a href="//www.linkedin.com/shareArticle?url=https%3a%2f%2fpebcac.github.io%2fposts%2fcentos-guest-agent%2f&amp;title=" target="_blank"
+       title="Share on LinkedIn">
+         <span class="fa-stack fa-lg">
+                <i class="fa fa-circle fa-stack-2x"></i>
+                <i class="fa fa-linkedin fa-stack-1x fa-inverse"></i>
+              </span>
+    </a>
+</li>
+
+
+<li>
+    <a href="//www.stumbleupon.com/submit?url=https%3a%2f%2fpebcac.github.io%2fposts%2fcentos-guest-agent%2f&amp;title=" target="_blank"
+       title="Share on StumbleUpon">
+        <span class="fa-stack fa-lg">
+                <i class="fa fa-circle fa-stack-2x"></i>
+                <i class="fa fa-stumbleupon fa-stack-1x fa-inverse"></i>
+              </span>
+    </a>
+</li>
+
+
+<li>
+    <a href="//www.pinterest.com/pin/create/button/?url=https%3a%2f%2fpebcac.github.io%2fposts%2fcentos-guest-agent%2f&amp;description=" target="_blank"
+       title="Share on Pinterest">
+         <span class="fa-stack fa-lg">
+                <i class="fa fa-circle fa-stack-2x"></i>
+                <i class="fa fa-pinterest fa-stack-1x fa-inverse"></i>
+              </span>
+    </a>
+</li>
+
+              </ul>
+            </section>
+        
 
         
-      </div>
+          
+          
+        
+      </article>
+
+      
+        <ul class="pager blog-pager">
+          
+            <li class="previous">
+              <a href="https://pebcac.github.io/posts/ubuntu-guest-agent/" data-toggle="tooltip" data-placement="top" title="">&larr; Previous Post</a>
+            </li>
+          
+          
+            <li class="next">
+              <a href="https://pebcac.github.io/posts/2015-01-04-first-post/" data-toggle="tooltip" data-placement="top" title="First post!">Next Post &rarr;</a>
+            </li>
+          
+        </ul>
+      
+
+
+      
+        
+        
+      
+
     </div>
   </div>
+</div>
 
     <footer>
   <div class="container">
