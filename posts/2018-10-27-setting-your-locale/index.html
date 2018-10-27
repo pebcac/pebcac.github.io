@@ -1,0 +1,497 @@
+<!DOCTYPE html>
+<html lang="en">
+  
+<head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+
+  <title>Setting Your Locale in Ubuntu - Mr Pebcac</title>
+  <meta property="og:title" content="Setting Your Locale in Ubuntu" />
+  <meta name="twitter:title" content="Setting Your Locale in Ubuntu" />
+  <meta name="description" content="When programming or even running certain applications, have you ever received these or similar error messages?
+ locale: Cannot set LC_CTYPE to default locale: No such file or directory locale: Cannot set LC_MESSAGES to default locale: No such file or directory   Yea, I love the error too. 😏
+Luckily, there&#8217;s a simple fix:
+ See whih locale&#8217;s you have $ locale LANG=en_US.UTF-8 LC_CTYPE=en_US.UTF-8 LC_NUMERIC=&#34;en_US.UTF-8&#34; LC_TIME=&#34;en_US.UTF-8&#34; LC_COLLATE=&#34;en_US.UTF-8&#34; LC_MONETARY=&#34;en_US.UTF-8&#34; LC_MESSAGES=&#34;en_US.UTF-8&#34; LC_PAPER=&#34;">
+  <meta property="og:description" content="When programming or even running certain applications, have you ever received these or similar error messages?
+ locale: Cannot set LC_CTYPE to default locale: No such file or directory locale: Cannot set LC_MESSAGES to default locale: No such file or directory   Yea, I love the error too. 😏
+Luckily, there&#8217;s a simple fix:
+ See whih locale&#8217;s you have $ locale LANG=en_US.UTF-8 LC_CTYPE=en_US.UTF-8 LC_NUMERIC=&#34;en_US.UTF-8&#34; LC_TIME=&#34;en_US.UTF-8&#34; LC_COLLATE=&#34;en_US.UTF-8&#34; LC_MONETARY=&#34;en_US.UTF-8&#34; LC_MESSAGES=&#34;en_US.UTF-8&#34; LC_PAPER=&#34;">
+  <meta name="twitter:description" content="When programming or even running certain applications, have you ever received these or similar error messages?
+ locale: Cannot set LC_CTYPE to default locale: No such file or directory locale: Cannot …">
+  <meta name="author" content="Preston Davis"/>
+  <link href='https://pebcac.github.io/img/favicon.ico' rel='icon' type='image/x-icon'/>
+  <meta property="og:image" content="https://pebcac.github.io/img/avatar-icon.png" />
+  <meta name="twitter:image" content="https://pebcac.github.io/img/avatar-icon.png" />
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:site" content="@username" />
+  <meta name="twitter:creator" content="@username" />
+  <meta property="og:url" content="https://pebcac.github.io/posts/2018-10-27-setting-your-locale/" />
+  <meta property="og:type" content="website" />
+  <meta property="og:site_name" content="Mr Pebcac" />
+
+  <meta name="generator" content="Hugo 0.37.1" />
+  <link rel="canonical" href="https://pebcac.github.io/posts/2018-10-27-setting-your-locale/" />
+  <link rel="alternate" href="https://pebcac.github.io/index.xml" type="application/rss+xml" title="Mr Pebcac">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.7.1/katex.min.css" integrity="sha384-wITovz90syo1dJWVh32uuETPVEtGigN07tkttEqPv+uR2SE/mbQcG7ATL28aI9H0" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://pebcac.github.io/css/main.css" /><link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic" />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800" />
+  <link rel="stylesheet" href="https://pebcac.github.io/css/highlight.min.css" /><link rel="stylesheet" href="https://pebcac.github.io/css/codeblock.css" /><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/photoswipe/4.1.2/photoswipe.min.css" integrity="sha384-h/L2W9KefUClHWaty3SLE5F/qvc4djlyR4qY3NUV5HGQBBW7stbcfff1+I/vmsHh" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/photoswipe/4.1.2/default-skin/default-skin.min.css" integrity="sha384-iD0dNku6PYSIQLyfTOpB06F2KCZJAKLOThS5HRe8b3ibhdEQ6eKsFf/EeFxdOt5R" crossorigin="anonymous">
+
+
+</head>
+
+  <body>
+    <nav class="navbar navbar-default navbar-fixed-top navbar-custom">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#main-navbar">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="https://pebcac.github.io">Mr Pebcac</a>
+    </div>
+
+    <div class="collapse navbar-collapse" id="main-navbar">
+      <ul class="nav navbar-nav navbar-right">
+        
+          
+            <li>
+              <a title="Blog" href="/posts/">Blog</a>
+            </li>
+          
+        
+          
+            <li>
+              <a title="Tags" href="/tags">Tags</a>
+            </li>
+          
+        
+          
+            <li>
+              <a title="About" href="/page/about/">About</a>
+            </li>
+          
+        
+
+        
+
+        
+      </ul>
+    </div>
+
+    
+      <div class="avatar-container">
+        <div class="avatar-img-border">
+          <a title="Mr Pebcac" href="https://pebcac.github.io">
+            <img class="avatar-img" src="https://pebcac.github.io/img/avatar-icon.png" alt="Mr Pebcac" />
+          </a>
+        </div>
+      </div>
+    
+
+  </div>
+</nav>
+
+
+
+
+    
+
+
+<div class="pswp" tabindex="-1" role="dialog" aria-hidden="true">
+
+<div class="pswp__bg"></div>
+
+<div class="pswp__scroll-wrap">
+    
+    <div class="pswp__container">
+      <div class="pswp__item"></div>
+      <div class="pswp__item"></div>
+      <div class="pswp__item"></div>
+    </div>
+    
+    <div class="pswp__ui pswp__ui--hidden">
+    <div class="pswp__top-bar">
+      
+      <div class="pswp__counter"></div>
+      <button class="pswp__button pswp__button--close" title="Close (Esc)"></button>
+      <button class="pswp__button pswp__button--share" title="Share"></button>
+      <button class="pswp__button pswp__button--fs" title="Toggle fullscreen"></button>
+      <button class="pswp__button pswp__button--zoom" title="Zoom in/out"></button>
+      
+      
+      <div class="pswp__preloader">
+        <div class="pswp__preloader__icn">
+          <div class="pswp__preloader__cut">
+            <div class="pswp__preloader__donut"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="pswp__share-modal pswp__share-modal--hidden pswp__single-tap">
+      <div class="pswp__share-tooltip"></div>
+    </div>
+    <button class="pswp__button pswp__button--arrow--left" title="Previous (arrow left)">
+    </button>
+    <button class="pswp__button pswp__button--arrow--right" title="Next (arrow right)">
+    </button>
+    <div class="pswp__caption">
+      <div class="pswp__caption__center"></div>
+    </div>
+    </div>
+    </div>
+</div>
+
+
+  
+  
+  
+
+
+
+
+
+
+  
+
+  <header class="header-section ">
+    
+    <div class="intro-header no-img">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+            <div class="posts-heading">
+              
+                <h1>Setting Your Locale in Ubuntu</h1>
+              
+              
+                <hr class="small">
+              
+              
+              
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </header>
+
+
+    
+<div class="container" role="main">
+  <div class="row">
+    <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+      <article role="main" class="blog-post">
+        <div class="paragraph">
+<p>When programming or even running certain applications, have you ever received these or similar error messages?</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code>locale: Cannot set LC_CTYPE to default locale: No such file or directory
+locale: Cannot set LC_MESSAGES to default locale: No such file or directory</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>Yea, I love the error too. 😏<br>
+Luckily, there&#8217;s a simple fix:</p>
+</div>
+<div class="listingblock">
+<div class="title">See whih locale&#8217;s you have</div>
+<div class="content">
+<pre>$ locale
+LANG=en_US.UTF-8
+LC_CTYPE=en_US.UTF-8
+LC_NUMERIC="en_US.UTF-8"
+LC_TIME="en_US.UTF-8"
+LC_COLLATE="en_US.UTF-8"
+LC_MONETARY="en_US.UTF-8"
+LC_MESSAGES="en_US.UTF-8"
+LC_PAPER="en_US.UTF-8"
+LC_NAME="en_US.UTF-8"
+LC_ADDRESS="en_US.UTF-8"
+LC_TELEPHONE="en_US.UTF-8"
+LC_MEASUREMENT="en_US.UTF-8"
+LC_IDENTIFICATION="en_US.UTF-8"
+LC_ALL=</pre>
+</div>
+</div>
+<div class="paragraph">
+<p>As you can see in my example above, my locale&#8217;s are set to <code><code>en_US.UTF-8</code></code>, which is my desired setting. But what if they were not? How do I fix this error?</p>
+</div>
+<div class="listingblock">
+<div class="title">Time to fix things</div>
+<div class="content">
+<pre>$ sudo local-gen "en_US.UTF-8"
+Generating locales...
+  en_US.UTF-8... done
+Generation complete.
+
+$ sudo dpkg-reconfigure locales
+Generating locales...
+  en_US.UTF-8... up-to-date
+Generation complete.</pre>
+</div>
+</div>
+<div class="paragraph">
+<p>And that should get you where you need to be.</p>
+</div>
+
+
+        
+          <div class="blog-tags">
+            
+              <a href="https://pebcac.github.io/tags/linux/">linux</a>&nbsp;
+            
+              <a href="https://pebcac.github.io/tags/locale/">locale</a>&nbsp;
+            
+              <a href="https://pebcac.github.io/tags/ubuntu/">ubuntu</a>&nbsp;
+            
+          </div>
+        
+
+        
+            <hr/>
+            <section id="social-share">
+              <ul class="list-inline footer-links">
+                
+
+
+<li>
+    <a href="//twitter.com/share?url=https%3a%2f%2fpebcac.github.io%2fposts%2f2018-10-27-setting-your-locale%2f&amp;text=Setting%20Your%20Locale%20in%20Ubuntu&amp;via=username"
+       target="_blank" alt="" title="Share on Twitter">
+        <span class="fa-stack fa-lg">
+                <i class="fa fa-circle fa-stack-2x"></i>
+                <i class="fa fa-twitter fa-stack-1x fa-inverse"></i>
+              </span>
+    </a>
+</li>
+
+
+<li>
+    <a href="//plus.google.com/share?url=https%3a%2f%2fpebcac.github.io%2fposts%2f2018-10-27-setting-your-locale%2f" target="_blank" title="Share on Google Plus">
+         <span class="fa-stack fa-lg">
+                <i class="fa fa-circle fa-stack-2x"></i>
+                <i class="fa fa-google-plus fa-stack-1x fa-inverse"></i>
+              </span>
+    </a>
+</li>
+
+
+<li>
+    <a href="//www.facebook.com/sharer/sharer.php?u=https%3a%2f%2fpebcac.github.io%2fposts%2f2018-10-27-setting-your-locale%2f" target="_blank" title="Share on Facebook">
+        <span class="fa-stack fa-lg">
+                <i class="fa fa-circle fa-stack-2x"></i>
+                <i class="fa fa-facebook fa-stack-1x fa-inverse"></i>
+              </span>
+    </a>
+</li>
+
+
+<li>
+    <a href="//reddit.com/submit?url=https%3a%2f%2fpebcac.github.io%2fposts%2f2018-10-27-setting-your-locale%2f&amp;title=Setting%20Your%20Locale%20in%20Ubuntu" target="_blank" title="Share on Reddit">
+         <span class="fa-stack fa-lg">
+                <i class="fa fa-circle fa-stack-2x"></i>
+                <i class="fa fa-reddit fa-stack-1x fa-inverse"></i>
+              </span>
+    </a>
+</li>
+
+
+<li>
+    <a href="//www.linkedin.com/shareArticle?url=https%3a%2f%2fpebcac.github.io%2fposts%2f2018-10-27-setting-your-locale%2f&amp;title=Setting%20Your%20Locale%20in%20Ubuntu" target="_blank"
+       title="Share on LinkedIn">
+         <span class="fa-stack fa-lg">
+                <i class="fa fa-circle fa-stack-2x"></i>
+                <i class="fa fa-linkedin fa-stack-1x fa-inverse"></i>
+              </span>
+    </a>
+</li>
+
+
+<li>
+    <a href="//www.stumbleupon.com/submit?url=https%3a%2f%2fpebcac.github.io%2fposts%2f2018-10-27-setting-your-locale%2f&amp;title=Setting%20Your%20Locale%20in%20Ubuntu" target="_blank"
+       title="Share on StumbleUpon">
+        <span class="fa-stack fa-lg">
+                <i class="fa fa-circle fa-stack-2x"></i>
+                <i class="fa fa-stumbleupon fa-stack-1x fa-inverse"></i>
+              </span>
+    </a>
+</li>
+
+
+<li>
+    <a href="//www.pinterest.com/pin/create/button/?url=https%3a%2f%2fpebcac.github.io%2fposts%2f2018-10-27-setting-your-locale%2f&amp;description=Setting%20Your%20Locale%20in%20Ubuntu" target="_blank"
+       title="Share on Pinterest">
+         <span class="fa-stack fa-lg">
+                <i class="fa fa-circle fa-stack-2x"></i>
+                <i class="fa fa-pinterest fa-stack-1x fa-inverse"></i>
+              </span>
+    </a>
+</li>
+
+              </ul>
+            </section>
+        
+
+        
+          
+          
+          <h4 class="see-also">See also</h4>
+          <ul>
+          
+            <li><a href="/posts/2018-10-27-ubuntu-ovirt-guest-agent/">Ubuntu OVirt Guest Agent</a></li>
+          
+            <li><a href="/posts/centos-ovirt-guest-agent/">Centos OVirt Guest Agent</a></li>
+          
+          </ul>
+          
+        
+      </article>
+
+      
+        <ul class="pager blog-pager">
+          
+            <li class="previous">
+              <a href="https://pebcac.github.io/posts/2018-10-27-ubuntu-ovirt-guest-agent/" data-toggle="tooltip" data-placement="top" title="Ubuntu OVirt Guest Agent">&larr; Previous Post</a>
+            </li>
+          
+          
+        </ul>
+      
+
+
+      
+        
+        
+      
+
+    </div>
+  </div>
+</div>
+
+    <footer>
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+        <ul class="list-inline text-center footer-links">
+          
+              <li>
+                <a href="mailto:pdavis@pebcac.org" title="Email me">
+                  <span class="fa-stack fa-lg">
+                    <i class="fa fa-circle fa-stack-2x"></i>
+                    <i class="fa fa-envelope fa-stack-1x fa-inverse"></i>
+                  </span>
+                </a>
+              </li>
+              <li>
+                <a href="https://github.com/pdred" title="GitHub">
+                  <span class="fa-stack fa-lg">
+                    <i class="fa fa-circle fa-stack-2x"></i>
+                    <i class="fa fa-github fa-stack-1x fa-inverse"></i>
+                  </span>
+                </a>
+              </li>
+              <li>
+                <a href="https://twitter.com/username" title="Twitter">
+                  <span class="fa-stack fa-lg">
+                    <i class="fa fa-circle fa-stack-2x"></i>
+                    <i class="fa fa-twitter fa-stack-1x fa-inverse"></i>
+                  </span>
+                </a>
+              </li>
+              <li>
+                <a href="https://linkedin.com/in/username" title="LinkedIn">
+                  <span class="fa-stack fa-lg">
+                    <i class="fa fa-circle fa-stack-2x"></i>
+                    <i class="fa fa-linkedin fa-stack-1x fa-inverse"></i>
+                  </span>
+                </a>
+              </li>
+          
+          <li>
+            
+            <a href="https://pebcac.github.io/index.xml" title="RSS">
+            
+              <span class="fa-stack fa-lg">
+                <i class="fa fa-circle fa-stack-2x"></i>
+                <i class="fa fa-rss fa-stack-1x fa-inverse"></i>
+              </span>
+            </a>
+          </li>
+          
+        </ul>
+        <p class="credits copyright text-muted">
+          
+            
+              <a href="https://pebcac.github.io">Preston Davis</a>
+            
+          
+
+          &nbsp;&bull;&nbsp;
+          2018
+
+          
+            &nbsp;&bull;&nbsp;
+            <a href="https://pebcac.github.io">Mr Pebcac</a>
+          
+        </p>
+        
+        <p class="credits theme-by text-muted">
+          <a href="http://gohugo.io">Hugo v0.37.1</a> powered &nbsp;&bull;&nbsp; Theme by <a href="http://deanattali.com/beautiful-jekyll/">Beautiful Jekyll</a> adapted to <a href="https://github.com/halogenica/beautifulhugo">Beautiful Hugo</a>
+          
+        </p>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.7.1/katex.min.js" integrity="sha384-/y1Nn9+QQAipbNQWU65krzJralCnuOasHncUFXGkdwntGeSvQicrYkiUBwsgUqc1" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.7.1/contrib/auto-render.min.js" integrity="sha384-dq1/gEHSxPZQ7DdrM82ID4YVol9BYyU7GbWlIwnwyPzotpoc57wDw/guX8EaYGPx" crossorigin="anonymous"></script>
+<script src="https://code.jquery.com/jquery-1.12.4.min.js" integrity="sha256-ZosEbRLbNQzLpnKIkEdrPv7lOy9C27hHQ+Xp8a4MxAQ=" crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+<script src="https://pebcac.github.io/js/main.js"></script>
+<script src="https://pebcac.github.io/js/highlight.min.js"></script>
+<script> hljs.initHighlightingOnLoad(); </script>
+<script> $(document).ready(function() {$("pre.chroma").css("padding","0");}); </script><script> renderMathInElement(document.body); </script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/photoswipe/4.1.2/photoswipe.min.js" integrity="sha384-QELNnmcmU8IR9ZAykt67vGr9/rZJdHbiWi64V88fCPaOohUlHCqUD/unNN0BXSqy" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/photoswipe/4.1.2/photoswipe-ui-default.min.js" integrity="sha384-m67o7SkQ1ALzKZIFh4CiTA8tmadaujiTa9Vu+nqPSwDOqHrDmxLezTdFln8077+q" crossorigin="anonymous"></script>
+<script src="https://pebcac.github.io/js/load-photoswipe.js"></script>
+
+
+
+
+
+
+
+<script type="text/javascript">
+$(function(){
+  $('#show-comments').on('click', function(){
+    var disqus_shortname = '';
+      
+    (function() {
+      var disqus = document.createElement('script'); 
+      disqus.type = 'text/javascript'; 
+      disqus.async = true;
+      disqus.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+      (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(disqus);
+    })();
+      
+    $(this).hide(); 
+    });
+  });
+      
+</script>
+<script id="dsq-count-scr" src="//.disqus.com/count.js" async></script>
+
+
+
+
+  </body>
+</html>
+
